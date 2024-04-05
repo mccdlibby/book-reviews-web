@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>Book Reviews</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+
+<body>
+    <h1>Book Reviews</h1>
+
+    <!-- Add a div to input book data -->
+    <div id="addBook">
+        <h2>Add a Book</h2>
+        <input type="text" id="bookTitle" placeholder="Book Title">
+        <input type="text" id="publicationYear" placeholder="Publication Year">
+        <button onclick="addBook()">Add</button>
+    </div>
+
+    <!-- Modify authors input section -->
+    <div id="authorInputs">
+        <input type="text" class="authorName" placeholder="Author Name">
+    </div>
+    <button type="button" onclick="addAuthorInput()">+</button>
+
+<!-- Add a div for search functionality -->
+<div id="searchBooks">
+    <h2>Search Books by Year</h2>
+    <!-- Input field for entering the year -->
+    <input type="text" id="searchYear" placeholder="Enter Year">
+    <!-- Button to trigger the search -->
+    <button onclick="searchByYear()">Search</button>
+</div>
+
+<!-- Display search results in this div -->
+<div id="searchResults">
+    <!-- Search results will be displayed here dynamically -->
+</div>
+
+
+
+    <!-- Display books in this div -->
+    <div id="bookList">
+        <!-- Book data will be displayed here dynamically -->
+    </div>
+
+    <button id="showBooksButton" onclick="showAllBooks()">Show All Books</button>
+
+    <!-- Display books in this div -->
+    <div id="allbooks">
+        <!-- Book data will be displayed here dynamically -->
+    </div>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
